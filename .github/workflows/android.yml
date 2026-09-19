@@ -54,6 +54,7 @@ jobs:
         run: |
           patch ./Amethyst-Android/app_pojavlauncher/src/main/java/net/kdt/pojavlaunch/tasks/MinecraftDownloader.java MinecraftDownloader.patch
           patch ./Amethyst-Android/app_pojavlauncher/src/main/java/net/kdt/pojavlaunch/Tools.java Tools.patch
+          patch ./Amethyst-Android/app_pojavlauncher/src/main/res/xml/pref_experimental.xml SodiumQuiz.patch
 
       - name: Build Release .apk
         env:
