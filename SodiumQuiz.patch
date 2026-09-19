@@ -1,0 +1,19 @@
+diff --git a/app_pojavlauncher/src/main/res/xml/pref_experimental.xml b/app_pojavlauncher/src/main/res/xml/pref_experimental.xml
+index c3536d559..ceccd1563 100644
+--- a/app_pojavlauncher/src/main/res/xml/pref_experimental.xml
++++ b/app_pojavlauncher/src/main/res/xml/pref_experimental.xml
+@@ -15,6 +15,7 @@
+             android:title="@string/preference_force_big_core_title"
+             android:summary="@string/preference_force_big_core_desc" />
+         <net.kdt.pojavlaunch.prefs.MathQuestionPreference
++            android:defaultValue="true"
+             android:title="@string/sodium_override_title"
+             android:summaryOff="@string/sodium_override_summaryOff"
+             android:summaryOn="@string/sodium_override_summaryOn"
+@@ -22,4 +23,4 @@
+             />
+ 
+     </PreferenceCategory>
+-</PreferenceScreen>
+\ No newline at end of file
++</PreferenceScreen>
