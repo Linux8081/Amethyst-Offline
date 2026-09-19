@@ -53,6 +53,8 @@ jobs:
           patch ./Amethyst-Android/app_pojavlauncher/src/main/java/net/kdt/pojavlaunch/Tools.java Tools.patch
 
       - name: Build Release .apk
+        env:
+          GPLAY_KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
         run: |
           cd Amethyst-Android
           # Build the launcher
@@ -92,7 +94,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: android-${{ github.run_id }}
-          name: "(${{ steps.date.outputs.date }})"
           files: |
             out/app-release.apk
             out/app-release.md5
